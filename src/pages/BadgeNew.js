@@ -3,6 +3,7 @@ import header from '../images/badge-header.svg';
 import Navbar from '../components/Navbar';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
+import './styles/BadgeNew.css'
 
 class BadgeNew extends React.Component {
     render(){
