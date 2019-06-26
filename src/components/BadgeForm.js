@@ -1,9 +1,15 @@
 import React from 'react';
  class BadgeForm extends React.Component{
+     state={
+         jobTitle: 'Web Developer'
+     }
      handleChange = (event) =>{
-        console.log({
-            name: event.target.name,
-            value: event.target.value
+        // console.log({
+        //     name: event.target.name,
+        //     value: event.target.value
+        // });
+        this.setState({
+            [event.target.name]: event.target.value
         });
      }
      handleClick = (event) =>{
@@ -12,6 +18,7 @@ import React from 'react';
      handleSubmit = (event) =>{
          event.preventDefault();
          console.log('Button submitted');
+         console.log(this.state)
      }
      render(){
          return(
@@ -21,7 +28,38 @@ import React from 'react';
                   <div className="form-group">
                      <label>First Name</label>
                      <input onChange={this.handleChange}
-                     name='firstName' className='form-control'
+                     name='firstName' 
+                     className='form-control'
+                     type="text"/>
+                 </div>
+                 <div className="form-group">
+                     <label>Last Name</label>
+                     <input onChange={this.handleChange}
+                     name='lastName' 
+                     className='form-control'
+                     type="text"/>
+                 </div>
+                 <div className="form-group">
+                     <label>Email Name</label>
+                     <input onChange={this.handleChange}
+                     name='email' 
+                     className='form-control'
+                     type="email"/>
+                 </div>
+                 <div className="form-group">
+                     <label>Job Title</label>
+                     <input onChange={this.handleChange}
+                     name='jobTitle' 
+                     className='form-control'
+                     type="text"
+                     value={this.state.jobTitle}
+                     />
+                 </div>
+                 <div className="form-group">
+                     <label>Twitter</label>
+                     <input onChange='@{this.handleChange}'
+                     name='twitter' 
+                     className='form-control'
                      type="text"/>
                  </div>
                  <button 
