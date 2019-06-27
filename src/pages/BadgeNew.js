@@ -34,10 +34,11 @@ class BadgeNew extends React.Component {
                     <div className='row'>
                         <div className='col-6'>
                             <Badge 
-                            firstName='Saul'
-                            lastName='Montes De Oca'
-                            info='Computer Science Major'
-                            twitter='saul_mdo'
+                            firstName={this.state.form.firstName}
+                            lastName={this.state.form.lastName}
+                            info={this.state.form.jobTitle}
+                            twitter={this.state.form.twitter}
+                            email={this.state.form.email}
                             hashtag='ReactRocks'
                             avatarUrl='http://bothsides.jimihendrix.com/wp-content/uploads/2017/12/COVER_BothSidesOfTheSky.jpg'
                             />
